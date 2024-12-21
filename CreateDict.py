@@ -10,12 +10,22 @@ for word in words:
 print(rus_dict)
 
 f.close()
-f = open('rus_dict_4_5.txt', 'w', encoding='utf-8')
-json_data = json.dumps(rus_dict)
-# print(json_data)
-print(json_data, file = f)
-# print(type(json_data))
+
+f = open("english_nouns.txt", 'r')
+words = f.readlines()
+eng_dict = {4: [], 5: []}
+for word in words:
+    word = word[:-1]
+    if (len(word) == 4 or len(word) == 5) and (len(word) == len(set(word))):
+        eng_dict[len(word)].append(word)
+print(eng_dict)
 f.close()
+# f = open('rus_dict_4_5.txt', 'w', encoding='utf-8')
+# json_data = json.dumps(rus_dict)
+# # print(json_data)
+# print(json_data, file = f)
+# # print(type(json_data))
+# f.close()
 # headers = {
 #     'Content-type': 'application/json',
 #     'Accept': 'text/plain'

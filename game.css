@@ -36,6 +36,17 @@ body {
     font-size: 20px;
     margin: 1.5rem;
 }
+.giveUp {
+    position: absolute;
+    right: 60px;
+    bottom: 0;
+    text-align:center;
+    margin: 20px;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    border-radius: 10%;
+}
 .history {
     margin: 10px;
     font-size: 30px;
