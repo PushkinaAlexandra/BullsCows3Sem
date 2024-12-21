@@ -1,0 +1,57 @@
+body {
+    font-family: 'Playfair Display';
+    background-color: black;
+    color: white;
+    margin:auto;
+    display: inline;
+    position: relative;
+}
+
+.inputField {
+    margin: auto;
+    text-align: center;
+    border-radius: 15%;
+    border: solid 5px;
+    padding: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: URL("BlackBG.jpg");
+    z-index: 0;
+}
+.inputLetter {
+    font-size: 30px;
+    text-align:center;
+    border-radius: 25%;
+    height: 3rem;
+}
+.check {
+    margin: 20px;
+    background-color: green;
+    color: white;
+    font-size: 20px;
+    border-radius: 10%;
+}
+.info {
+    font-size: 20px;
+    margin: 1.5rem;
+}
+.history {
+    margin: 10px;
+    font-size: 30px;
+    padding: 10px 15px;
+    align-items: center;
+    z-index: -1;
+}
+th {
+    margin: 1px;
+    padding: 1px;
+}
+td {
+    margin: 1px;
+    padding: 1px;
+    text-align: center;
+}
+.columnHistory {
+    border: solid 1px;
+}
