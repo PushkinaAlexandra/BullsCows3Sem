@@ -66,3 +66,12 @@ td {
 .columnHistory {
     border: solid 1px;
 }
+.home {
+    position: absolute;
+    top:0;
+    left:0;
+    float: left;
+}
+a {
+    color: white;
+}

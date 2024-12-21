@@ -88,15 +88,17 @@ function randomInteger(min, max){
 }
 
 $(document).ready ( function() {
-    let n = 4;
-    let language = "eng";
+    let myData = localStorage['dataTransfer'];
+    localStorage.removeItem( 'dataTransfer' );
+    let n = Number(myData[0]);
+    let lang = myData.slice(2, 5);
     let sizeField = 400;
     createInputField(n, sizeField);
     createHistory();
     let countColumn = 0;
     let countRow = 0;
     let dictWords;
-    if (language == "rus"){
+    if (lang == "rus"){
         dictWords = importRusWords();
     }
     else {
@@ -161,7 +163,7 @@ $(document).ready ( function() {
     $('.giveUp').click(function(){
         let losePhrase = document.createElement("h1");
         losePhrase.className = "losePhrase";
-        if (language == "rus"){
+        if (lang == "rus"){
             losePhrase.append("Вы проиграли! Слово было " + word);
         }
         else{

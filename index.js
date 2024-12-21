@@ -1,24 +1,169 @@
+
+function createNames(){
+    let textPart = document.createElement("div");
+    textPart.className = "textPart";
+    let nameGame = document.createElement("div");
+    nameGame.className = "nameGame";
+    let rusNameGame = document.createElement("p");
+    rusNameGame.className = "rusNameGame";
+    rusNameGame.append("Быки и коровы");
+    nameGame.append(rusNameGame);
+    let engNameGame = document.createElement("p");
+    engNameGame.className = "engNameGame";
+    engNameGame.append("Bulls and cows");
+    nameGame.append(engNameGame);
+    textPart.append(nameGame);
+    $('.body').append(textPart);
+}
+
+function createRusRules(){
+    let rusRules = document.createElement("div");
+    rusRules.className = "rules";
+    rusRules.id = "rusRules";
+    let headRusRules = document.createElement("p");
+    headRusRules.className = "headRusRules";
+    headRusRules.append("Правила игры:");
+    rusRules.append(headRusRules);
+    let mainRusRules = document.createElement("p");
+    mainRusRules.className = "mainRusRules";
+    mainRusRules.append("Вам загадано имя существительное в именительном падеже в единственном числе. Ваша задача отгадать его. За каждый ход вы предлагаете свое слово, а компьютер говорит количество в Вашем слове коров и быков.");
+    rusRules.append(mainRusRules);
+    let cowsRusRules = document.createElement("p");
+    cowsRusRules.className = "cowsRusRules";
+    cowsRusRules.append("Коровы (cows) - буква есть в слове, но стоит не на своём месте.");
+    rusRules.append(cowsRusRules);
+    let bullsRusRules = document.createElement("p");
+    bullsRusRules.className = "bullsRusRules";
+    bullsRusRules.append("Быки (bulls) - буква стоит на своём месте.");
+    rusRules.append(bullsRusRules);
+    $('.rulesPart').append(rusRules);
+}
+
+function createEngRules(){
+    let engRules = document.createElement("div");
+    engRules.className = "rules";
+    engRules.id = "engRules";
+    engRules.style.height = "" + ($('.rules')[0].offsetHeight + 20) + "px"
+    let headEngRules = document.createElement("p");
+    headEngRules.className = "headEngRules";
+    headEngRules.append("Rules of the game:");
+    engRules.append(headEngRules);
+    let mainEngRules = document.createElement("p");
+    mainEngRules.className = "mainEngRules";
+    mainEngRules.append("You are given a noun. You task is to guess it. Each move is you variant of the word and computer answer about bulls and cows.");
+    engRules.append(mainEngRules);
+    let cowsEngRules = document.createElement("p");
+    cowsEngRules.className = "cowsEngRules";
+    cowsEngRules.append("Cows - word includes letter, but in wrong position.");
+    engRules.append(cowsEngRules);
+    let bullsEngRules = document.createElement("p");
+    bullsEngRules.className = "bullsEngRules";
+    bullsEngRules.append("Bulls - letter on right position.");
+    engRules.append(bullsEngRules);
+    $('.rulesPart').append(engRules);
+}
+
+function languageQuest(){
+    let formLangQuest = document.createElement("form");
+    formLangQuest.className = "form";
+    formLangQuest.id = "formLangQuest";
+    let langQuest = document.createElement("fieldset");
+    langQuest.className = "quest";
+    langQuest.id = "langQuest";
+    let legendLang = document.createElement("legend");
+    legendLang.className = "legendLang";
+    legendLang.append("Выберите язык (Choose language):");
+    let inputFirstQuest = document.createElement("input");
+    inputFirstQuest.type = "radio";
+    inputFirstQuest.id = "contactChoice1";
+    inputFirstQuest.name = "language";
+    inputFirstQuest.value = "rus";
+    let labelFirstQuest = document.createElement("label");
+    labelFirstQuest.for = "contactChoice1";
+    labelFirstQuest.append("Русский (Russian)")
+    let inputSecondQuest = document.createElement("input");
+    inputSecondQuest.type = "radio";
+    inputSecondQuest.id = "contactChoice2";
+    inputSecondQuest.name = "language";
+    inputSecondQuest.value = "eng";
+    let labelSecondQuest = document.createElement("label");
+    labelSecondQuest.for = "contactChoice2";
+    labelSecondQuest.append("Английский (English)")
+    langQuest.append(legendLang);
+    langQuest.append(inputFirstQuest)
+    langQuest.append(labelFirstQuest)
+    langQuest.append(inputSecondQuest)
+    langQuest.append(labelSecondQuest)
+    formLangQuest.append(langQuest)
+    $('#choosePart').append(formLangQuest);
+}
+
+function countQuest(){
+    let formCountQuest = document.createElement("form");
+    formCountQuest.className = "form";
+    formCountQuest.id = "formCountQuest";
+    let countQuest = document.createElement("fieldset");
+    countQuest.className = "quest";
+    countQuest.id = "countQuest";
+    let legendCount = document.createElement("legend");
+    legendCount.className = "legendCount";
+    legendCount.append("Выберите количество букв (Choose count of letters):");
+    let inputFirstQuest = document.createElement("input");
+    inputFirstQuest.type = "radio";
+    inputFirstQuest.id = "contactChoice1";
+    inputFirstQuest.name = "count";
+    inputFirstQuest.value = 4;
+    let labelFirstQuest = document.createElement("label");
+    labelFirstQuest.for = "contactChoice1";
+    labelFirstQuest.append("4")
+    let inputSecondQuest = document.createElement("input");
+    inputSecondQuest.type = "radio";
+    inputSecondQuest.id = "contactChoice2";
+    inputSecondQuest.name = "count";
+    inputSecondQuest.value = 5;
+    let labelSecondQuest = document.createElement("label");
+    labelSecondQuest.for = "contactChoice2";
+    labelSecondQuest.append("5")
+    countQuest.append(legendCount);
+    countQuest.append(inputFirstQuest)
+    countQuest.append(labelFirstQuest)
+    countQuest.append(inputSecondQuest)
+    countQuest.append(labelSecondQuest)
+    formCountQuest.append(countQuest)
+    $('#choosePart').append(formCountQuest);
+}
+
+function createChoosePart(){
+    let choosePart = document.createElement("div");
+    choosePart.className = "rules";
+    choosePart.id = "choosePart";
+    $('.rulesPart').append(choosePart);
+    languageQuest();
+    countQuest();
+    let play = document.createElement("input");
+    play.id = "playButton";
+    play.type = "button";
+    play.value = "Play!";
+    play.name = "play";
+    $('#choosePart').append(play);
+}
+
 $(document).ready ( function() {
-    let n = 4;
-    let i = 0;
-    while (i < n){
-        let inputLetter = document.createElement("input");
-        inputLetter.type = 'text';
-        inputLetter.className = 'inputLet';
-        inputLetter.id = 'let' + i
-        $('.input').append(inputLetter);
-        i += 1;
-    }
-//    let word = "орех"
-    $('.check').click( function(){
-        let i = 0;
-        let tryWord = "";
-        while (i < n){
-            console.log('#let'+i);
-            console.log($('#let' + i).value);
-            tryWord += $('#let' + i).value;
-            i += 1;
-        }
-        console.log(tryWord);
-    });
+    createNames();
+    let rules = document.createElement("div");
+    rules.className = "rulesPart";
+    $('.body').append(rules);
+    createRusRules();
+    createChoosePart();
+    createEngRules();
+    $('#playButton').click( function(){
+        let n = document.querySelector('input[name="count"]:checked').value;
+        let lang = document.querySelector('input[name="language"]:checked').value;
+        console.log(n)
+        console.log(lang)
+        let dataTransfer = [n, lang];
+        localStorage.setItem("dataTransfer", dataTransfer); /*Заносим значение поля_1 в хранилище*/
+        document.location.href = 'Game.html';
+    })
+
 });
