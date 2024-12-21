@@ -1,7 +1,6 @@
 import json
-import requests
 
-f = open("russianWords.txt", 'r', encoding='utf-8')
+f = open("russian_nouns.txt", 'r', encoding='utf-8')
 words = f.readlines()
 rus_dict = {4: [], 5: []}
 for word in words:
@@ -10,11 +9,13 @@ for word in words:
         rus_dict[len(word)].append(word)
 print(rus_dict)
 f.close()
-# json_data = json.dumps(rus_dict)
-# print(json_data)
-# print(type(json_data))
-headers = {
-    'Content-type': 'application/json',
-    'Accept': 'text/plain'
-}
-response = requests.post('http://localhost:3000', data=json.dumps(rus_dict), headers=headers)
+f = open('rus_dict_4_5.txt', 'w', encoding='utf-8')
+json_data = json.dumps(rus_dict)
+print(json_data)
+print(json_data, file = f)
+print(type(json_data))
+# headers = {
+#     'Content-type': 'application/json',
+#     'Accept': 'text/plain'
+# }
+# response = requests.post('http://localhost:3000', data=json.dumps(rus_dict), headers=headers)
