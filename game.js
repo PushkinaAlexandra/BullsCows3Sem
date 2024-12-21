@@ -64,7 +64,7 @@ function importWords(){
     // Создаем объект XMLHttpRequest
     var xhr = new XMLHttpRequest();
     // Настраиваем запрос
-    xhr.open('GET', 'russianWords.json', true);
+    xhr.open('GET', 'https://github.com/PushkinaAlexandra/BullsCows3Sem/blob/main/russianWords.json', true);
     // Обрабатываем ответ
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4 && xhr.status == 200) {
