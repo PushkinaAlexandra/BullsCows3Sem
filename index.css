@@ -30,8 +30,8 @@ body {
     padding: 10px;
     width: 30%;
     border: solid 1px;
-    position: absolute;
-    top: 0;
+/*    position: absolute;
+    top: 0; */
 }
 .quest {
     flex-direction: column;
