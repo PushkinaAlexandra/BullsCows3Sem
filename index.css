@@ -36,3 +36,14 @@ body {
 .quest {
     flex-direction: column;
 }
+#playButton {
+    color: white;
+    background: black;
+    font-size: 16px;
+    text-align: center;
+    margin:auto;
+}
+.choosePart {
+    margin:auto;
+    text-align: center;
+}

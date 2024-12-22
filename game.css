@@ -75,3 +75,6 @@ td {
 a {
     color: white;
 }
+.giveUp {
+    z-index: 1;
+}
