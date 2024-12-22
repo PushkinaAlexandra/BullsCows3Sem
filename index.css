@@ -19,7 +19,9 @@ body {
 }
 .rulesPart {
     margin: auto;
-    align-items: center;
+    padding: 0;
+    position: relative;
+    justify-content: space-between;
 }
 .rules {
     font-size: 20px;
@@ -28,6 +30,8 @@ body {
     padding: 10px;
     width: 30%;
     border: solid 1px;
+    position: absolute;
+    top: 0;
 }
 .quest {
     flex-direction: column;
