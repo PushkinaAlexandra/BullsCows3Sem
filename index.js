@@ -89,11 +89,15 @@ function languageQuest(){
     let labelSecondQuest = document.createElement("label");
     labelSecondQuest.for = "contactChoice2";
     labelSecondQuest.append("Английский (English)")
+    let divRusLang = document.createElement("div");
+    divRusLang.append(inputFirstQuest)
+    divRusLang.append(labelFirstQuest)
+    let divEngLang = document.createElement("div");
+    divEngLang.append(inputSecondQuest)
+    divEngLang.append(labelSecondQuest)
     langQuest.append(legendLang);
-    langQuest.append(inputFirstQuest)
-    langQuest.append(labelFirstQuest)
-    langQuest.append(inputSecondQuest)
-    langQuest.append(labelSecondQuest)
+    langQuest.append(divRusLang)
+    langQuest.append(divEngLang)
     formLangQuest.append(langQuest)
     $('#choosePart').append(formLangQuest);
 }
@@ -124,11 +128,15 @@ function countQuest(){
     let labelSecondQuest = document.createElement("label");
     labelSecondQuest.for = "contactChoice2";
     labelSecondQuest.append("5")
+    let divFour = document.createElement("div");
+    divFour.append(inputFirstQuest)
+    divFour.append(labelFirstQuest)
+    let divFive = document.createElement("div");
+    divFive.append(inputSecondQuest)
+    divFive.append(labelSecondQuest)
     countQuest.append(legendCount);
-    countQuest.append(inputFirstQuest)
-    countQuest.append(labelFirstQuest)
-    countQuest.append(inputSecondQuest)
-    countQuest.append(labelSecondQuest)
+    countQuest.append(divFour)
+    countQuest.append(divFive)
     formCountQuest.append(countQuest)
     $('#choosePart').append(formCountQuest);
 }

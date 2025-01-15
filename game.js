@@ -123,6 +123,7 @@ $(document).ready ( function() {
         let form = document.forms.inputWord;
         for (let i = 0; i < n; i++){
             inputWord += form.elements[i].value;
+            form.elements[i].value = '';
         }
         inputWord = inputWord.toLowerCase();
         let flag = true;
