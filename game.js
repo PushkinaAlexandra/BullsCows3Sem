@@ -107,6 +107,17 @@ $(document).ready ( function() {
     let randomIndex = randomInteger(0, dictWords[n].length);
     let word = dictWords[n][randomIndex];
     console.log(word);
+    $(".inputLetter").keyup(function() {
+        console.log('keyup')
+        if (this.value.length == this.maxLength) {
+
+          var $next = $(this).next('.inputLetter');
+          if ($next.length)
+              $(this).next('.inputLetter').focus();
+          else
+              $(this).blur();
+        }
+    });
     $('.check').click(function(){
         let inputWord = "";
         let form = document.forms.inputWord;
